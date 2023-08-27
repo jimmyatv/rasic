@@ -1,0 +1,15 @@
+input {
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+
+input::placeholder {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+form {
+    margin-top: 20px;
+}

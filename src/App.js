@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import Form from './components/Form/Form';
+import List from './components/List/List';
 import './App.css';
 
-function App() {
+const App = () => {
+
+  const [persons, setPersons] = useState([
+    {
+      name: 'Anja',
+      lname: 'Rasic',
+      age: '11'
+    },
+    {
+      name: 'Biljana',
+      lname: 'Rasic',
+      age: '32'
+    },
+    {
+      name: 'Aleksandar',
+      lname: 'Rasic',
+      age: '35'
+    },
+    {
+      name: 'Teodor',
+      lname: 'Rasic',
+      age: '6'
+    },
+    {
+      name: 'Veljko',
+      lname: 'Rasic',
+      age: '6'
+    }
+  ])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form persons={persons} setPersons={setPersons} />
+      <List persons={persons} setPersons={setPersons} />
     </div>
   );
-}
+};
 
 export default App;
